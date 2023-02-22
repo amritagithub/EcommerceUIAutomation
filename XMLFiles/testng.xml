@@ -4,6 +4,7 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="com.magento.testPages.LandingPageTest"/>
+       <class name="com.magento.testPages.SignInPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

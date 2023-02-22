@@ -1,25 +1,22 @@
 package com.magento.testPages;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
 import com.magento.base.BaseTest;
+import com.magento.pageObjects.LandingPage;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+public class LandingPageTest extends BaseTest {
 
-public class LandingPageTest extends BaseTest{
-
-	//Method to click on signIn button
-	@SuppressWarnings("deprecation")
+	// Method to click on signIn button
 	@Test
-	public void clickOnSignIN()
-	{
-		driver.get("https://magento.softwaretestingboard.com/");
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	public void clickOnSignIN() {
 		
+		landingpage.clickOnSignIn();
+		logger.log(Status.PASS, "clicked on sign in button");
+	
+
 	}
-}
+	}
