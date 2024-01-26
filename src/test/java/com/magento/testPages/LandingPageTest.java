@@ -6,17 +6,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import com.magento.base.BaseTest;
+
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class LandingPageTest extends BaseTest{
+public class LandingPageTest {
 
 	//Method to click on signIn button
-	@SuppressWarnings("deprecation")
+	
 	@Test
 	public void clickOnSignIN()
 	{
+		WebDriverManager.chromedriver().setup();
+		 WebDriver driver=new ChromeDriver();
 		driver.get("https://magento.softwaretestingboard.com/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
