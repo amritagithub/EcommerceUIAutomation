@@ -25,6 +25,7 @@ public class LandingPageTest {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//a[contains(text(),'Sign In')]")).click();
+		driver.findElement(By.id("email")).sendKeys("amrita@test.com");
 		
 		
 	}
